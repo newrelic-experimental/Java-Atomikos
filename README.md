@@ -2,26 +2,30 @@
 
 # [Name of Project] [build badges go here when available]
 
->[Brief description - what is the project and value does it provide? How often should users expect to get releases? How is versioning set up? Where does this project want to go?]
+>Gives status of Atomikos Data Sources since this information is unavailable via JMX
 
 ## Installation
 
-> [Include a step-by-step procedure on how to get your code installed. Be sure to include any third-party dependencies that need to be installed separately]
+> 1. Download the Release jars   
+2. In the New Relic Java Agent directory (the one containing newrelic.jar), create a directory named extensions   
+3. Copy the downloaded jars into the extensions directory   
+4. Restart the application
 
 ## Getting Started
->[Simple steps to start working with the software similar to a "Hello World"]
-
-## Usage
->[**Optional** - Include more thorough instructions on how to use the software. This section might not be needed if the Getting Started section is enough. Remove this section if it's not needed.]
-
+> Once the jars have been deployed, the New Relic Java Agent should start reporting Metrics of the following format: Custom/Atomikos Connection Pools/JDBC/poolName/Available & Custom/Atomikos Connection Pools/JDBC/poolname/Total.    
+> 
 
 ## Building
 
->[**Optional** - Include this section if users will need to follow specific instructions to build the software from source. Be sure to include any third party build dependencies that need to be installed separately. Remove this section if it's not needed.]
-
-## Testing
-
->[**Optional** - Include instructions on how to run tests if we include tests with the codebase. Remove this section if it's not needed.]
+> To build the instrumentation jars requires having Gradle installed.   
+To Build:   
+Set the environment variable NEW_RELIC_EXTENSIONS_DIR to the extensions directory of the New Relic Java Agent or a local directory   
+To build a single module, run the command   
+gradle moduleName:clean moduleName:install   
+To build all modules, run the command:   
+gradle clean install
+If NEW_RELIC_EXTENSIONS_DIR does not point to the extensions directory of the New Relic Java Agent, copy the resulting jars into the extensions directory   
+Restart the application
 
 ## Support
 
@@ -35,4 +39,3 @@ If you have any questions, or to execute our corporate CLA, required if your con
 
 ## License
 [Project Name] is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
->[If applicable: The [project name] also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document.]
