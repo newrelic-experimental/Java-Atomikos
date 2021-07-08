@@ -1,0 +1,5 @@
+rootProject.name = 'newrelic-java-atomikos'
+include 'atomikos-cp'
+include 'atomikos-jms'
+include 'atomikos-cp-4.0'
+include 'atomikos-cp-5.0'

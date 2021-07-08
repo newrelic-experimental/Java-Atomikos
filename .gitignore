@@ -1,6 +1,6 @@
 bin
+.git
 .DS_Store
-.gradle
 .project
 .settings
 *.class
