@@ -1,3 +1,11 @@
+## Version: [v1.0.1](https://github.com/newrelic-experimental/newrelic-java-atomikos/releases/tag/v1.0.1) | Created: 2023-09-28
+### Build Upgrades
+- Updated vendor title
+
+### Bug Fixes
+- Applied jmx-api 1.1-rev-1 to resolve the build issue.
+
+
 ## Installation
 
 To install:
