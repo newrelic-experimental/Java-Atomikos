@@ -1,10 +1,11 @@
 
-// Build.gradle generated for instrumentation module atomikos-cp-5.0
+// Build.gradle generated for instrumentation module atomikos_jms
 
 apply plugin: 'java'
 
 dependencies {
-    implementation 'com.atomikos:transactions-jdbc:5.0.0'
+    implementation  'com.atomikos:transactions-jms:5.0.0'
+    implementation 'javax.jms:jms-api:1.1-rev-1'
 
    // New Relic Labs Java Agent dependencies
    implementation 'com.newrelic.agent.java:newrelic-agent:6.0.0'
@@ -14,7 +15,7 @@ dependencies {
 
 jar {
   manifest {
-    attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.atomikos-cp-5.0'
+    attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.atomikos_jms-5.0'
     attributes 'Implementation-Vendor': 'New Relic Labs'
     attributes 'Implementation-Vendor-Id': 'com.newrelic.labs'
     attributes 'Implementation-Version': 1.0
@@ -22,6 +23,5 @@ jar {
 }
 
 verifyInstrumentation {
-    passes 'com.atomikos:transactions-jdbc:[5.0.0,)'
-    excludeRegex '.*M[0-9]'
+	passes 'com.atomikos:transactions-jms:[5.0.0,)'
 }
