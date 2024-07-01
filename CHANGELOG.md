@@ -1,7 +1,6 @@
 ## Version: [v1.1.1](https://github.com/newrelic-experimental/newrelic-java-atomikos/releases/tag/v1.1.1) | Created: 2024-07-01
 ### Bug Fixes
-- Pdated Gradle and fixed verifyInstrumentation
-- Pdated Gradle and fixed verifyInstrumentation
+- Updated Gradle and fixed verifyInstrumentation
 
 ### Features
 - Added Support for 6.0
